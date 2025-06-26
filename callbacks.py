@@ -20,9 +20,10 @@ class TokenAnalysisCallback(BaseCallbackHandler):
         self.db_data["request_token_count"] = len(tokens)
         
         # 打印请求信息和内容
-        print("\n=== 请求信息 ===")
+        print("\n=== 请求信息 ==vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
         print(f"请求内容:\n{combined_prompt}")  # 打印完整请求内容
         print(f"Token 数量（请求）: {len(tokens)}")
+        print("\n=== 请求信息 ==^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     
     def on_llm_end(self, response, **kwargs):
         if response.generations:
@@ -33,10 +34,10 @@ class TokenAnalysisCallback(BaseCallbackHandler):
             self.db_data["response_token_count"] = len(tokens)
             
             # 打印响应信息
-            print("=== 响应信息 ===")
+            print("\n=== 请求信息 ==vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv")
             print(f"响应内容:\n{result_text}")  # 打印完整响应内容
             print(f"Token 数量（响应）: {len(tokens)}")
-            print("------------------")
+            print("\n=== 请求信息 ==^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     
     def get_db_data(self):
         return self.db_data
