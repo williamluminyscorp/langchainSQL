@@ -1,0 +1,22 @@
+# 忽略 .env 文件
+.env
+*.env
+
+# Python 相关忽略
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 开发环境文件
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+bge_env/
+embedding_models/
+data/
+# 日志和临时文件
+*.log
+*.tmp
