@@ -5,6 +5,8 @@ from langchain_community.agent_toolkits import create_sql_agent
 from langchain_core.callbacks import BaseCallbackHandler
 import tiktoken
 from callbacks import TokenAnalysisCallback 
+from langchain.globals import set_debug
+set_debug(True)
 
 # 初始化 DeepSeek LLM
 deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")  # 确保环境变量已设置

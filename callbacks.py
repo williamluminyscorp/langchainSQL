@@ -1,6 +1,7 @@
 import tiktoken
 from langchain_core.callbacks import BaseCallbackHandler
 
+
 class TokenAnalysisCallback(BaseCallbackHandler):
     def __init__(self, encoding_name="cl100k_base"):
         self.encoder = tiktoken.get_encoding(encoding_name)
